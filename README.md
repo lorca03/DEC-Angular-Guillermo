@@ -9,7 +9,7 @@
     - ***favicon.ico ->***  icono o símbolo que acompaña a la URL en los navegadores
     - ***index.html ->*** aplicacion raiz y donde se insterat el componente html
     - ***main.ts ->*** ese es el primer código que se ejecuta, arranca la aplicación. Carga todo y controla el inicio de la aplicación.
-- ![Imagen Aclarativa](explicacion.jfif){width=100px height=100px}
+- ![Imagen Aclarativa](explicacion.jfif)
 2. **.editorconfig ->** define estilos de codificación consistentes para múltiples desarrolladores que trabajan en el mismo proyecto con editores de texto distinto
 3. **angular.json ->** valores por defecto para la configuración del proyecto angular
 4. **package-lock.json ->** información de versión para todos los paquetes instalados en la carpeta node_modules
