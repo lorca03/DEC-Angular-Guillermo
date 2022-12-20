@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ejer1';
+  //title = 'ejer1';
+  title : string = 'contadorApp';
+  contador : number= 10;
+  base : number= 10;
+  sumres(num:number){
+    this.contador+=num;
+  }
 }
