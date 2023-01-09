@@ -7,6 +7,22 @@ import { Component } from '@angular/core';
     
   })
   export class HeroeComponent {
-    //title = 'ejer1';
     title : string = 'heroeApp';
+    nombre : string = 'Ironman';
+    edad : number = 45;
+
+    
+    get nombreMayus() : string {
+      return this.nombre.toUpperCase();
+    }
+    
+    obtenerNombre(): string {
+      return `${this.nombre} - ${this.edad}`;
+    }
+    cambiarNombre():void {
+      this.nombre='Spiderman';
+    }
+    cambiarEdad():void {
+      this.edad=23;
+    }
   }

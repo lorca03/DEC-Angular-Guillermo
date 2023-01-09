@@ -11,7 +11,8 @@ import { Component } from '@angular/core';
     styleUrls: ['../app.component.scss']
     
   })
-  export class ContenedorComponent {
+  
+  export class ContadorComponent {
     //title = 'ejer1';
     title : string = 'contadorApp';
     contador : number= 10;
