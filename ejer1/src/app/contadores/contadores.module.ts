@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ContadorComponent } from './contador.component';
 
 @NgModule({
-    declarations: [
+    declarations:[
         ContadorComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
     ],
     exports:[
         ContadorComponent
