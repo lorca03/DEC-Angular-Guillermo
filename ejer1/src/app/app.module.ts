@@ -10,6 +10,7 @@ import { HeroesModule } from './heroes/heroes.module';
 import { ContadoresModule } from './contadores/contadores.module';
 import { DbzModule } from './dbz/dbz.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DbzService } from './dbz/services/dbz.services';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     DbzModule,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    DbzService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

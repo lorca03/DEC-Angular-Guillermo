@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
 import { NgbPaginationNumber } from '@ng-bootstrap/ng-bootstrap';
+import { Personaje } from '../interfaces/dbz.interfaces';
+import { DbzService } from '../services/dbz.services';
 
-interface Personaje{
-  nombre:string;
-  poder:number
-}
 
 
 @Component({
   selector: 'app-main-page',
   templateUrl: './main-page.component.html',
-  styleUrls: ['main-page.component.scss']
+  styleUrls: ['main-page.component.scss'],
 })
 export class MainPageComponent {
   nuevo: Personaje={
@@ -35,15 +33,8 @@ export class MainPageComponent {
       poder:5
     },
   ]
-  agregar(){
-    if (this.nuevo.nombre.trim().length===0) {
-      return;
-    }
-    this.personajes.push(this.nuevo);
-    this.nuevo={
-      nombre:'',
-      poder:0
-    }
+  agregarNuevoPersonaje(personaje:Personaje){
+    this.personajes.push(personaje);
   }
-  
+  constructor(private dbzService:DbzService){}
 }

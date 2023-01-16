@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <br><h1>Dragon Ball Z</h1>
-<hr>
-<div class="row">
-    <div class="col">
+  </head>
+  <body>
+    <br />
+    <h1>Dragon Ball Z</h1>
+    <hr />
+    <div class="row">
+      <div class="col">
         <h4>Personajes</h4>
-    </div>
-    <div class="col">
+      </div>
+      <div class="col">
         <h4>Agregar nuevo Personaje</h4>
+      </div>
     </div>
-</div>
-<hr>
-<div class="row">
-    <div class="col-2"></div>
-    <div class="col-2">
-        <ul class="list-group">
-            <li class="list-group-item" *ngFor="let personaje of personajes">
-                {{personaje.nombre+' -- '+personaje.poder}}</li>
-          </ul>
+    <hr />
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-2">
+        <app-personajes [personajes]="personajes"></app-personajes>
+      </div>
+      <div class="col-4"></div>
+      <div class="col-3 agregar">
+        <app-agregar [nuevo]="nuevo" (OnNuevoPersonaje)="agregarNuevoPersonaje( $event )"> </app-agregar>
+      </div>
     </div>
-    <div class="col-4"></div>
-    <div class="col-3 agregar" >
-        <form (ngSubmit)="agregar()">
-            <input type="text" name="nombre" placeholder="Nombre: " [(ngModel)]="nuevo.nombre"><br><br>
-            <input type="number" name="poder" placeholder="Poder: "  [(ngModel)]="nuevo.poder"><br><br>
-            <button type="submit">Agregar</button>
-        </form>
-    </div>
-</div>
-
-</body>
+  </body>
 </html>

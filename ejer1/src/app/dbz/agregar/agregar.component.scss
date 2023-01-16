@@ -1,0 +1,19 @@
+input{
+    border-radius: 5px;
+    color: #ff7801;
+    border:1px solid white;
+    background-color: #005d97;
+}
+input::placeholder{
+    color: #ff7801;
+}
+button {
+    background-color: #005d97;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: #ff7801;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 5px 10px;
+}
