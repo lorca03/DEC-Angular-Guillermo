@@ -12,12 +12,13 @@ export class AgregarComponent {
     nombre:'',
     poder:0
   };
-  @Output() OnNuevoPersonaje: EventEmitter<Personaje>=new EventEmitter();
+  // @Output() OnNuevoPersonaje: EventEmitter<Personaje>=new EventEmitter();
   agregar(){
     if (this.nuevo.nombre.trim().length===0) {
       return;
     }
-    this.OnNuevoPersonaje.emit(this.nuevo);
+    this.dbzService.agregarNuevoPersonaje(this.nuevo);
+    // this.OnNuevoPersonaje.emit(this.nuevo);
     this.nuevo={
       nombre:'',
       poder:0
