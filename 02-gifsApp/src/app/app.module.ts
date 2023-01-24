@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './shared/shared.module';
 import { GifsModule } from './gifs/gifs.module';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GifsModule } from './gifs/gifs.module';
     BrowserModule,
     NgbModule,
     SharedModule,
-    GifsModule
+    GifsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
