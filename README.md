@@ -1,4 +1,6 @@
 # DEC-Angular-Guillermo
+## Explicacion repositorio
+> Ejercicios sencillos e introductorios de angular. 
 ## Explicacion archivos
 1. **src ->** carpeta donde se encuentra en proyecto entero.
     - ***app-routing.module.ts ->*** configura las rutas del proyecto 
