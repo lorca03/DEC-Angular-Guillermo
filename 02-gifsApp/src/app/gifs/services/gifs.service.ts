@@ -6,7 +6,12 @@ import { Gif, SearchGIFResponse, Images } from '../interface/gifs.interface';
   providedIn: 'root',
 })
 export class GifsService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+    if (localStorage.getItem('historial')) {
+      this._historial=JSON.parse(localStorage.getItem('historial')!);
+      this.resultados=JSON.parse(localStorage.getItem('resultados')!);
+    }
+  }
   private _historial: string[] = [];
   private apiKey: string = '54fdwkFFmVmBroDnVRmeZ7R8E46encgA';
   public resultados: Gif[]=[];
@@ -20,8 +25,8 @@ export class GifsService {
       !this._historial.includes(query.toLowerCase())
     ) {
       this._historial.unshift(query.toLowerCase());
-      console.log(this._historial);
       this._historial = this._historial.splice(0, 10);
+      localStorage.setItem('historial', JSON.stringify(this._historial))
     }
 
     this.http.get<SearchGIFResponse>(
@@ -29,6 +34,7 @@ export class GifsService {
     ).subscribe((resp) => {
         console.log(resp.data);
         this.resultados=resp.data;
+        localStorage.setItem('resultados', JSON.stringify(this.resultados))
     });
   }
 }
