@@ -2,7 +2,7 @@
     <h3 class="text-light">Aplicacion Gifs</h3>
     <hr class="text-white">
     <div class="list-group list-reset">
-        <a href="#" class="list-group-item list list-group-item-action" *ngFor="let busqueda of historial">
+        <a href="#" class="list-group-item list list-group-item-action" *ngFor="let busqueda of historial" (click)="buscarGifs(busqueda)">
             {{busqueda | titlecase}}
         </a>
     </div>
