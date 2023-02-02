@@ -10,7 +10,7 @@ import { ResultadosComponent } from './resultados/resultados.component';
   declarations: [
     GifsPageComponent,
     BusquedaComponent,
-    ResultadosComponent
+    ResultadosComponent,
   ],
   imports: [
     CommonModule
