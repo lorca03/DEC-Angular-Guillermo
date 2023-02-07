@@ -9,6 +9,6 @@ import { AppRouterModule } from './app-router.module';
   declarations: [AppComponent],
   imports: [BrowserModule, PrimeNgModule, SharedModule, AppRouterModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}

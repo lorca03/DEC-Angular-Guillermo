@@ -22,6 +22,6 @@ const routes: Routes = [
     OrdenarComponent,
   ],
   exports:[RouterModule],
-  imports: [CommonModule, RouterModule.forRoot(routes)]
+  imports: [RouterModule.forRoot(routes),CommonModule]
 })
 export class AppRouterModule {}
