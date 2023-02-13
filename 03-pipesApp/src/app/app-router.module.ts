@@ -5,6 +5,7 @@ import { BasicosComponent } from './ventas/pages/basicos/basicos.component';
 import { NumerosComponent } from './ventas/pages/numeros/numeros.component';
 import { NoComunesComponent } from './ventas/pages/no-comunes/no-comunes.component';
 import { OrdenarComponent } from './ventas/pages/ordenar/ordenar.component';
+import {  } from "module";
 
 const routes: Routes = [
   { path: '', component: BasicosComponent, pathMatch: 'full' },
@@ -15,12 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    BasicosComponent,
-    NumerosComponent,
-    NoComunesComponent,
-    OrdenarComponent,
-  ],
+  declarations: [],
   exports:[RouterModule],
   imports: [RouterModule.forRoot(routes),CommonModule]
 })
