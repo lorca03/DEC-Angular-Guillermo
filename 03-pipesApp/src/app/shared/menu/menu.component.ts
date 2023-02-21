@@ -17,7 +17,7 @@ export class MenuComponent {
               items: [
                   {label: 'Textos y fechas', icon: 'pi pi-align-left', routerLink:'2'},
                   {label: 'Numeros', icon: 'pi pi-dollar', routerLink:'numeros'},
-                  {label: 'No comunes', icon: 'pi pi-globe', routerLink:'no-comunes'}
+                  {label: 'No comunes', icon: 'pi pi-globe', routerLink:'noComunes'}
               ]
           },
           {

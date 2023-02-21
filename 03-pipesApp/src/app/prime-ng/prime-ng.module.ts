@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import {ButtonModule} from 'primeng/button';
 import {CardModule} from 'primeng/card';
 import {MenubarModule} from 'primeng/menubar';
+import {FieldsetModule} from 'primeng/fieldset';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [],
@@ -10,12 +12,16 @@ import {MenubarModule} from 'primeng/menubar';
     CommonModule,
     ButtonModule,
     CardModule,
-    MenubarModule
+    MenubarModule,
+    FieldsetModule,
+    BrowserAnimationsModule
   ],
   exports:[
     ButtonModule,
     CardModule,
-    MenubarModule
+    MenubarModule,
+    FieldsetModule,
+    BrowserAnimationsModule
   ]
 })
 export class PrimeNgModule { }
