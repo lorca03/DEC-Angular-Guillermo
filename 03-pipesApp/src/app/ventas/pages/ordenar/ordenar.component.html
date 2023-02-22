@@ -6,23 +6,23 @@
     <div class="grid">
         <div class="col"> 
             <p-fieldset legend="Longitud Pipe" [toggleable]="true"> 
-                <pre>
+                <label>
                     {{frase}} -> Palabras = {{frase | longitud}}
-                </pre>
+                </label>
              </p-fieldset>
         </div>
         <div class="col"> 
             <p-fieldset legend="Fecha Pipe" [toggleable]="true"> 
-                <pre>
+                <label>
                     {{fecha | jsonDate}}
-                </pre>
+                </label>
              </p-fieldset>
         </div>
         <div class="col"> 
             <p-fieldset legend="Multiplicador Pipe" [toggleable]="true"> 
-                <pre>
+                <label>
                     {{numero}} * 45 = {{numero | multiplicador:'45'}}
-                </pre>
+                </label>
              </p-fieldset>
         </div>
     </div>
