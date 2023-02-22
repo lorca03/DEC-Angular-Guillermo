@@ -1,1 +1,29 @@
-<p>ordenar works!</p>
+<div class="text-layout">
+    <h1>Pipes personalizados</h1>
+    <p>
+        Pipes creados por nosotros
+    </p>
+    <div class="grid">
+        <div class="col"> 
+            <p-fieldset legend="Longitud Pipe" [toggleable]="true"> 
+                <pre>
+                    {{frase}} -> Palabras = {{frase | longitud}}
+                </pre>
+             </p-fieldset>
+        </div>
+        <div class="col"> 
+            <p-fieldset legend="Fecha Pipe" [toggleable]="true"> 
+                <pre>
+                    {{fecha | jsonDate}}
+                </pre>
+             </p-fieldset>
+        </div>
+        <div class="col"> 
+            <p-fieldset legend="Multiplicador Pipe" [toggleable]="true"> 
+                <pre>
+                    {{numero}} * 45 = {{numero | multiplicador:'45'}}
+                </pre>
+             </p-fieldset>
+        </div>
+    </div>
+</div>

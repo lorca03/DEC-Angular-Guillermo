@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class OrdenarComponent {
 
+  frase='Hola soy pedro'
+  fecha='02-12-03'
+  numero=23
 }

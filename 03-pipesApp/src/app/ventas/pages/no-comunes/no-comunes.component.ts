@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-comunes',
@@ -30,4 +31,30 @@ export class NoComunesComponent {
   borrarCliente() {
     this.clientes = this.clientes.slice(0, this.clientes.length - 1);
   }
+  persona2={
+    Nombre: 'Guille',
+    Edad: 19,
+    Direccion:'Calicanto'
+  }
+  heroes=[
+    {
+      nombre:'Superman',
+      vuela:true
+    },
+    {
+      nombre:'Robin',
+      vuela:false
+    },
+    {
+      nombre:'Aquaman',
+      vuela:false
+    }
+  ]
+  miObservable = interval(1000)
+
+  valorPromesa=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      resolve('Tenemos data de promesa')
+    },3500)
+  })
 }

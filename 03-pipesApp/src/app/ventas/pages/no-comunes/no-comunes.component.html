@@ -50,3 +50,39 @@
       </p-fieldset>
     </div>
   </div>
+
+  <div class="grid">
+    <div class="col">
+      <p-fieldset legend="keyValue Pipe" [toggleable]="true"> 
+         <ul>
+          <li *ngFor="let item of persona2 | keyvalue">
+            {{item.key}}:{{item.value}}
+          </li>
+         </ul>
+      </p-fieldset>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col">
+      <p-fieldset legend="JSON Pipe" [toggleable]="true"> 
+         <pre>
+          {{heroes | json}}
+         </pre>
+      </p-fieldset>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col">
+      <p-fieldset legend="Async Pipe" [toggleable]="true"> 
+         <pre>
+          {{miObservable | async}}
+         </pre>
+         <pre *ngIf="!(valorPromesa| async)">
+          Resolviendo promesa
+         </pre>
+         <pre>
+          {{valorPromesa | async}}
+         </pre>
+      </p-fieldset>
+    </div>
+  </div>
